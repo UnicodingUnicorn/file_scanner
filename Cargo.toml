@@ -1,0 +1,9 @@
+[package]
+name = "file_scanner2"
+version = "0.1.0"
+authors = ["UnicodingUnicorn <7555ic@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rust-crypto = "^0.2"
+#systemstat = "0.1.4"
