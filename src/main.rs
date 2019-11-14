@@ -30,7 +30,12 @@ fn main() {
     };
 
     let hashes_string = env!("FILE_SCANNER_HASHES");
-    let hashes = hashes_string.split(',').map(|hash| hash.trim().to_lowercase()).collect::<Vec<String>>();
+    let delimiter = env!("FILE_SCANNER_DELIMITER");
+    let delimiter = match delimiter.chars().next() {
+        Some(ch) => ch,
+        None => ',',
+    };
+    let hashes = hashes_string.split(delimiter).map(|hash| hash.trim().to_lowercase()).collect::<Vec<String>>();
 
     for mount in mounts {
         let path = Path::new(&mount);

@@ -41,5 +41,6 @@ COPY file-scanner.cgi /usr/local/apache2/cgi-bin/
 USER daemon
 WORKDIR /usr/app
 ENV FILE_SCANNER_HASHES stuff
+ENV FILE_SCANNER_DELIMITER ,
 RUN cargo build --target x86_64-pc-windows-gnu --release
 USER root
