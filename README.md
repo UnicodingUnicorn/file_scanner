@@ -17,7 +17,7 @@ docker run file-scanner/latest
 
 The server accepts a comma delimited string of hashes which can be a mix of MD5, SHA1 or SHA256. I'm pretty sure that the entire system has about all the safety of a sheep in a tiger pen, but ah well.
 
-For instance, enter this url in one's browser: `http://<host>/file-scanner.cgi?hashes=<hashes>`. Passing no hashes will return a 400.
+For instance, enter this url in one's browser: `http://<host>/file-scanner.cgi?hashes=<hashes>`. Passing no hashes will return a 400. Now comes with a simple form served at `/`.
 
 Alternatively, if one doesn't want to lower one's standards in life with weird web server things, one can always just compile it directly with rust:
 

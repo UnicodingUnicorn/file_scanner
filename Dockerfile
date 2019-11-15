@@ -36,6 +36,8 @@ WORKDIR /
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 # Copy CGI
 COPY file-scanner.cgi /usr/local/apache2/cgi-bin/
+# Copy page
+COPY index.html /usr/local/apache2/htdocs/
 
 # Test build
 USER daemon

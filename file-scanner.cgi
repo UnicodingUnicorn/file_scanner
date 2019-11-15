@@ -13,6 +13,7 @@ done
 
 if [ ${array[hashes]} ]; then
   export FILE_SCANNER_HASHES=${array[hashes]}
+  export FILE_SCANNER_DELIMITER=,
   cd /usr/app
   cargo clean --quiet --release --target x86_64-pc-windows-gnu -p file_scanner2
   cargo build --quiet --release --target x86_64-pc-windows-gnu
